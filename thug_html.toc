@@ -1,0 +1,4 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}{\ignorespaces Auto Transcription of Meetings\relax }}{9}{}%
+\contentsline {section}{\numberline {1.1}{\ignorespaces Part 1\relax }}{10}{}%
+\contentsline {section}{\numberline {1.2}{\ignorespaces Part 2\relax }}{11}{}%

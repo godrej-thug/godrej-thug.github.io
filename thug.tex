@@ -1,0 +1,192 @@
+\documentclass[makeidx, 9pt, oneside, onecolumn, openright, final, svgnames, dvipsnames]{memoir}
+\usepackage[HomeHTMLFilename=index]{lwarp}
+\CSSFilename{lwarp_sagebrush.css}
+\usepackage[english]{babel}
+
+
+%\usepackage{stix} %load it before ams ..
+\usepackage{calligra, url, comment, amsmath, amsthm, etoolbox, amssymb, manfnt}
+\usepackage{makeidx,listings, graphicx}
+\usepackage{xcolor}
+
+\definecolor{ruddybrown}{rgb}{0.73, 0.4, 0.16}
+% Euler for math and numbers
+%\usepackage[euler-digits,small]{eulervm}
+\usepackage[makeindex]{imakeidx} % hyper link index
+\usepackage[colorlinks=true, linkcolor=ruddybrown, linktoc=all]{hyperref}% hyper link ToC
+
+\usepackage{pgf}
+\usepackage{xkeyval,calc,tikz,fp}
+\usepackage{biblatex}
+\usepackage{arydshln}
+\usepackage{hologo, mflogo}
+\usepackage{pgfplots}
+
+\usepackage{physics} %\usepackage[italicdiff]{physics} %careful: \div does not produce division symbol, it produces differential operator. Use \divisionsymbol for producing the division symbol.
+
+\usepackage{dashrule}
+\usepackage{varwidth} % hyphenate texts in TikZ Node 
+
+
+
+
+
+
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+\colorlet{TitleColor}{Snow}
+\colorlet{SubTitleColor}{Snow}
+
+\HTMLTitle{Godrej : A Modern Thug}       % Overrides \title for the web page.
+\HTMLLanguage{en-US}  
+
+
+
+\begin{document}
+
+
+
+%\arrayrulecolor{gray} % <sets color of the \hline in tables
+%\color{shadow}
+%set fontsize to 9.5 pt
+%\fontsize{9.2pt}{11.04pt}\selectfont %\fontsize{desirefontsize in pt}{baselineskip = desirefontsize x 1.2}
+\thispagestyle{empty}
+%\setmainfont{DejaVu Serif}
+%\setmainfont{Dijkstra}
+
+%\small
+%\footnotesize
+%\scriptsize
+%\large
+
+\begin{center}
+\includegraphics{cover}
+\end{center}
+
+\begin{comment}
+
+\begin{tikzpicture}[remember picture,overlay]
+
+  
+
+\begin{scope}[shift={(current page.center)}]
+
+%\node[fill=Gold, minimum width=12in, minimum height=9.25in,text=white,ultra thick] 
+%\node[shading=ball, ball color=Yellow, minimum width=15in, minimum height=9.25in,text=white,ultra thick] 
+%\node[fill=Fuchsia, minimum width=15in, minimum height=9.25in,text=white,ultra thick] 
+\node[shade,top color=White, bottom color=LimeGreen, minimum width=15in, minimum height=9.25in,text=white,ultra thick] 
+%\node[shading=ball, ball color=MyColor, minimum width=6.375in, minimum height=9.25in,text=white,ultra thick] 
+at(0in,0in) (MyBox)
+{};
+
+\node[rotate=90]{\includegraphics[scale=0.5]{3}};
+
+\begin{scope}[shift={(0in,3.8in)}]
+
+
+\node[scale=0.85, at={(0in, 0in)}]
+    {\setmainfont{Cooper Black}
+\fontsize{2cm}{1.5cm}\selectfont \bfseries \textcolor{TitleColor}{\RaisedText{Godrej}}};
+
+
+\node[scale=0.65, at={(0in, -1.0in)}]
+    {\setmainfont{Cooper Black}
+\fontsize{2cm}{1.5cm}\selectfont \bfseries \textcolor{SubTitleColor} {\RaisedText{A Modern Thug}}};
+
+
+\node[scale=0.4, at={(0in, -2.8in)}]
+    {\setmainfont{Cooper Black}
+\fontsize{2cm}{1.5cm}\selectfont \bfseries  {\calligra  \RaisedText{A Crusade Against Educated Goons}}};
+
+
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+
+\end{comment}
+\newpage
+
+%reduce vertical space before and after align environment
+\abovedisplayshortskip=1pt
+\belowdisplayshortskip=1pt
+\abovedisplayskip=1pt
+\belowdisplayskip=1pt
+\jot=1pt
+ 
+\nonzeroparskip % increase paragraph spacing
+\thispagestyle{empty}
+%\begin{comment}
+\input{title}
+
+
+\newpage
+\thispagestyle{empty}
+
+\input{copyright}
+
+\frontmatter
+
+
+\renewcommand{\contentsname}{Dialogues}
+
+\pagenumbering{gobble}
+\tableofcontents*
+
+
+%\end{comment}
+
+\mainmatter
+\pagestyle{companion}
+%\pagestyle{noticenamedate}
+\setlength{\headwidth}{\textwidth}
+\setlength{\headwidth}{\textwidth}
+
+\renewcommand{\chaptername}{Dialogue}
+
+
+%\begin{comment}
+
+\chapter[Auto Transcription of Meetings]{Auto Transcription of Meetings \\ February 6, 2024 \\ Godrej Park Retreat}
+\thispagestyle{empty}
+\section{Part 1}
+\input{2}
+
+%\input{1}
+\section{Part 2}
+\input{1}
+
+
+
+
+\begin{comment}
+
+\backmatter
+
+%\input{appendix}
+
+\pagenumbering{gobble}
+%\pagenumbering{Alph}
+%\pagestyle{noticename}
+
+%\printindex
+
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+\hspace{1mm}
+\begin{center}
+\rotatebox{45}{\HUGE \textcolor{Gray}{This page is intentionally left blank.}}
+\end{center}
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+\hspace{1mm}
+\begin{center}
+\rotatebox{45}{\HUGE \textcolor{Gray}{This page is intentionally left blank.}}
+\end{center}
+
+\end{comment}
+
+\end{document}
